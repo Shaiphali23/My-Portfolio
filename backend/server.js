@@ -11,9 +11,12 @@ const PORT = process.env.PORT || 4000;
 app.use(bodyParser.json());
 app.use(
   cors({
-    origin: "*",
+    origin: [
+      "http://localhost:4000", // for local frontend
+      "https://my-portfolio-one-cyan-47.vercel.app/" // replace with actual Vercel frontend URL
+    ],
     methods: ["GET", "POST", "PUT", "DELETE"],
-    allowedHeaders: ["Content-Type"],
+    credentials: true,
   })
 );
 
