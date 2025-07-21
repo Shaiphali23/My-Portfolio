@@ -59,10 +59,10 @@ const App = () => {
   });
 
   const handleInputChange = (e) => {
-    const { id, value } = e.target;
+    const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
-      [id]: value,
+      [name]: value,
     }));
   };
 
@@ -801,6 +801,7 @@ const App = () => {
                     <CFormInput
                       type="text"
                       id="name"
+                      name="name" 
                       label="Your Name"
                       placeholder="Enter your name"
                       className="mb-3"
@@ -811,6 +812,7 @@ const App = () => {
                     <CFormInput
                       type="email"
                       id="email"
+                      name="email"
                       label="Email Address"
                       placeholder="Enter your email"
                       className="mb-3"
@@ -820,6 +822,7 @@ const App = () => {
                     />
                     <CFormTextarea
                       id="message"
+                      name="message"
                       label="Your Message"
                       placeholder="Hello, I'd like to talk about..."
                       rows={1}
