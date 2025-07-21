@@ -49,6 +49,8 @@ import Toast from "./components/Toast";
 const App = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const API_BASE_URL =
+  process.env.REACT_APP_API_URL || "https://my-portfolio-jrul.onrender.com";
 
   const [formData, setFormData] = useState({
     name: "",
@@ -69,7 +71,7 @@ const App = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("http://localhost:4000/api/contacts", {
+      const response = await fetch(`${API_BASE_URL}/api/contacts`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
