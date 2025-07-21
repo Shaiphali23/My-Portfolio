@@ -4,3 +4,4 @@
 
 # Ignore environment variables from backend
 /backend/.env
+/frontend/.env

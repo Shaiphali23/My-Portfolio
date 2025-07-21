@@ -45,12 +45,10 @@ import MyImage from "../src/images/My_Photo.jpg";
 import "./App.css";
 import { toast } from "react-toastify";
 import Toast from "./components/Toast";
-
 const App = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const API_BASE_URL =
-  process.env.REACT_APP_API_URL || "https://my-portfolio-jrul.onrender.com";
+  const API_BASE_URL = process.env.REACT_APP_API_URL
 
   const [formData, setFormData] = useState({
     name: "",
