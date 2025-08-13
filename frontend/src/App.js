@@ -42,6 +42,7 @@ import StudyNotionImage from "../src/images/StudyNotionImg.png";
 import ShoppingCartImage from "../src/images/Shopping-cart-image.png";
 import RandomPasswordImage from "../src/images/password-generator.png";
 import MyImage from "../src/images/My_Photo.jpg";
+import FeedbackifyImage from "../src/images/FeedbackifyImage.png";
 import "./App.css";
 import { toast } from "react-toastify";
 import Toast from "./components/Toast";
@@ -145,6 +146,15 @@ const App = () => {
       image: RandomPasswordImage,
       liveUrl: "https://random-password-generator-virid-zeta.vercel.app",
       githubUrl: "https://github.com/Shaiphali23/random-password-generator",
+    },
+    {
+      id: 4,
+      title: "Feedbackify App",
+      description: "Feedback collection and analysis tool",
+      tags: ["MongoDB", "ExpressJS", "ReactJS", "NodeJS"],
+      image: FeedbackifyImage,
+      liveUrl: "https://feedbackify-app.vercel.app/",
+      githubUrl: "https://github.com/Shaiphali23/Feedbackify-App",
     },
   ];
 
