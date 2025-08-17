@@ -46,6 +46,7 @@ import FeedbackifyImage from "../src/images/FeedbackifyImage.png";
 import "./App.css";
 import { toast } from "react-toastify";
 import Toast from "./components/Toast";
+import Chatbot from "./components/Chatbot";
 const App = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -923,6 +924,8 @@ const App = () => {
             </CRow>
           </CContainer>
         </CFooter>
+
+        <Chatbot />
       </div>
     </>
   );
