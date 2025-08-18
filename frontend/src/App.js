@@ -33,8 +33,6 @@ import {
   cilArrowRight,
   cilEnvelopeOpen,
   cilExternalLink,
-  cilPhone,
-  cilLocationPin,
   cilX,
 } from "@coreui/icons";
 import heroImage from "../src/images/heroImg.png";
@@ -50,7 +48,7 @@ import Chatbot from "./components/Chatbot";
 const App = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const API_BASE_URL = process.env.REACT_APP_API_URL
+  const API_BASE_URL = process.env.REACT_APP_API_URL;
 
   const [formData, setFormData] = useState({
     name: "",
@@ -761,56 +759,18 @@ const App = () => {
               </p>
             </div>
 
-            <CRow className="g-4">
-              <CCol sm={12} lg={6}>
-                <div className="contact-info p-4 rounded-3 shadow-sm">
-                  <h4 className="mb-4 fw-semibold">Contact Information</h4>
-                  <div className="mb-4">
-                    {/* Email */}
-                    <div className="d-flex align-items-center mb-3">
-                      <div className="contact-icon bg-primary bg-opacity-10 text-primary rounded-circle p-3 me-3">
-                        <CIcon icon={cilEnvelopeOpen} size="lg" />
-                      </div>
-                      <div>
-                        <h6 className="mb-0 text-muted small">Email</h6>
-                        <p className="text-decoration-none">
-                          shaiphalijaiswal978@gmail.com
-                        </p>
-                      </div>
-                    </div>
-
-                    {/* Phone */}
-                    <div className="d-flex align-items-center mb-3">
-                      <div className="contact-icon bg-primary bg-opacity-10 text-primary rounded-circle p-3 me-3">
-                        <CIcon icon={cilPhone} size="lg" />
-                      </div>
-                      <div>
-                        <h6 className="mb-0 text-muted small">Phone</h6>
-                        <p className="text-decoration-none">+917355510203</p>
-                      </div>
-                    </div>
-
-                    {/* Location */}
-                    <div className="d-flex align-items-center">
-                      <div className="contact-icon bg-primary bg-opacity-10 text-primary rounded-circle p-3 me-3">
-                        <CIcon icon={cilLocationPin} size="lg" />
-                      </div>
-                      <div>
-                        <h6 className="mb-0 text-muted small">Location</h6>
-                        <p className="mb-0">Delhi, India</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </CCol>
-
-              <CCol sm={12} lg={6}>
+            <CRow className="g-4 justify-content-center">
+              {" "}
+              {/* Added justify-content-center here */}
+              <CCol sm={12} lg={8} xl={6}>
+                {" "}
+                {/* Adjusted column sizes for better centering */}
                 <div className="contact-form p-4 rounded-3 shadow-sm">
                   <CForm onSubmit={handleSubmit}>
                     <CFormInput
                       type="text"
                       id="name"
-                      name="name" 
+                      name="name"
                       label="Your Name"
                       placeholder="Enter your name"
                       className="mb-3"
@@ -864,7 +824,7 @@ const App = () => {
               </CCol>
             </CRow>
           </CContainer>
-          <Toast/>
+          <Toast />
         </section>
 
         {/* Footer */}
