@@ -43,8 +43,10 @@ import MyImage from "../src/images/My_Photo.jpg";
 import FeedbackifyImage from "../src/images/FeedbackifyImage.png";
 import "./App.css";
 import { toast } from "react-toastify";
-import Toast from "./components/Toast";
 import Chatbot from "./components/Chatbot";
+import Toast from "./components/Toast";
+import AiProjectManagerImage from "../src/images/AiProjectManagerImage.png";
+
 const App = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -139,21 +141,22 @@ const App = () => {
     },
     {
       id: 3,
-      title: "Random Password Generator",
-      description: "Secure password generator with customizable options",
-      tags: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
-      image: RandomPasswordImage,
-      liveUrl: "https://random-password-generator-virid-zeta.vercel.app",
-      githubUrl: "https://github.com/Shaiphali23/random-password-generator",
-    },
-    {
-      id: 4,
       title: "Feedbackify App",
       description: "Feedback collection and analysis tool",
       tags: ["MongoDB", "ExpressJS", "ReactJS", "NodeJS"],
       image: FeedbackifyImage,
       liveUrl: "https://feedbackify-app.vercel.app/",
       githubUrl: "https://github.com/Shaiphali23/Feedbackify-App",
+    },
+    {
+      id: 4,
+      title: "AI Project Manager (MERN + Gemini AI)",
+      description:
+        "A full-stack project and task management application featuring a Trello-like Kanban board with drag-and-drop functionality and integrated Gemini AI assistant for project summaries and intelligent task insights.",
+      tags: ["MongoDB", "ExpressJS", "ReactJS", "NodeJS", "GeminiAI"],
+      image: AiProjectManagerImage,
+      liveUrl: "https://project-task-management-delta.vercel.app/",
+      githubUrl: "https://github.com/Shaiphali23/project-task-management",
     },
   ];
 
@@ -761,7 +764,6 @@ const App = () => {
 
             <CRow className="g-4 justify-content-center">
               {" "}
-              {/* Added justify-content-center here */}
               <CCol sm={12} lg={8} xl={6}>
                 {" "}
                 {/* Adjusted column sizes for better centering */}
